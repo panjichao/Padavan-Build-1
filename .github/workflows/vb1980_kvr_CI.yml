@@ -71,11 +71,11 @@ jobs:
           cd $config_dir
           for m in $targets; do if [ -f $m.config ]; then \
           ##科学上网##
-          echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=n" >> $m.config #科学上网插件，选择n后全部有关插件都不集成
+          echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> $m.config #科学上网插件，选择n后全部有关插件都不集成
           echo "CONFIG_FIRMWARE_INCLUDE_XRAY=n" >> $m.config #集成xray执行文件  ~4.5M
-          echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=n" >> $m.config #集成v2ray执行文件
-          echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=n" >> $m.config #集成trojan执行文件  ~1.2M
-          echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=n" >> $m.config #simple-obfs混淆插件
+          echo "CONFIG_FIRMWARE_INCLUDE_V2RAY=y" >> $m.config #集成v2ray执行文件
+          echo "CONFIG_FIRMWARE_INCLUDE_TROJAN=y" >> $m.config #集成trojan执行文件  ~1.2M
+          echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=y" >> $m.config #simple-obfs混淆插件
           echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=n" >> $m.config #SS server
           echo "CONFIG_FIRMWARE_INCLUDE_KUMASOCKS=n" >> $m.config #socks5
           echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=n" >> $m.config
@@ -98,7 +98,7 @@ jobs:
           echo "CONFIG_FIRMWARE_INCLUDE_WYY=n" >> $m.config #网易云解锁
           echo "CONFIG_FIRMWARE_INCLUDE_WYYBIN=n" >> $m.config #网易云解锁GO版本执行文件（2M多）注意固件超大小
           ##内网穿透服务##
-          echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=n" >> $m.config #zerotier ~1.3M
+          echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=y" >> $m.config #zerotier ~1.3M
           echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=n" >> $m.config #aliddns
           echo "CONFIG_FIRMWARE_INCLUDE_DDNSTO=n" >> $m.config #ddnsto  ~0.5M
           echo "CONFIG_FIRMWARE_INCLUDE_ALDRIVER=n" >> $m.config  #ALDRIVER  ~3m
